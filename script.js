@@ -1,0 +1,27 @@
+document.addEventListener('DOMContentLoaded',function(){
+  const menuToggle = document.getElementById('menuToggle');
+  const navList = document.getElementById('navList');
+  if(menuToggle && navList){
+    menuToggle.addEventListener('click',()=>{
+      const open = navList.style.display === 'flex' || navList.style.display === 'block';
+      navList.style.display = open ? 'none' : 'block';
+      menuToggle.setAttribute('aria-expanded', String(!open));
+
+
+  }
+  
+  )}});
+function GetWeather(){
+  const weatherTableBody = document.getElementById('weatherTableBody');
+  const day = new Date().toDateString().substring(0,4);
+
+  fetch('https://api.openweathermap.org/data/2.5/weather/?lat=40.8&lon=-74&appid=2563fbd21b629c5edc33e1c5fa83d6ba&units=imperial')
+    .then(response => response.json())
+    .then(data => {
+        let weatherHTML = '';
+        weatherHTML += '<tr><td>' + day + '</td><td>' + data.main.temp + '</td><td>' + data.weather[0].main + '</td></tr>';
+        weatherTableBody.innerHTML = weatherHTML;
+    });
+    
+}
+
