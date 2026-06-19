@@ -14,13 +14,15 @@ body{
   color:var(--text);
   -webkit-font-smoothing:antialiased;
 }
-.Header{border-bottom:10px solid var(--accent); padding-left: 12px; background: #e1b1ff; padding-top: 10pxs; }
-.container{border-bottom:5px dashed var(--accent);padding-left: 12px; background-color: aquamarine;}
-.table{width:100%;border-collapse:collapse;}
-.table th,.table td{padding:2rem;text-align:left;border-bottom:1px solid var(--accent);}
+.Header{border-bottom: 10px solid var(--accent); padding-left: 12px; background: #e1b1ff; padding-top: 10pxs; }
+.container{border-bottom : 5px dashed var(--accent); padding-left: 12px; background-color: aquamarine;}
+.table{width: 100%; border-collapse:collapse;}
+.table th,.table td{padding: 2rem; text-align: left; border-bottom: 1px solid var(--accent);}
 .table th{background:var(--card);color:var(--accent);}
 .blacked{background:#000000;color:#ffffff;}
 .button{background: #2563eb; color: #ffffff; scale: 125%; translate: 10px; border-radius: 5px;  margin-bottom: 10px;}
+.robot{background-image: url(https://prodmedia.firstillinoisrobotics.org/media/filer_public_thumbnails/filer_public/eb/ee/ebee5fa7-288d-4a40-8183-dbf8f4bac22e/vertical-4c-reverse.png__1027x855_subsampling-2.png); background-repeat: no-repeat;}
+
 
 @media (max-width:700px){
   .nav-list{display:none;flex-direction:column;background:var(--card);position:absolute;right:1rem;top:56px;padding:.5rem;border-radius:6px;box-shadow:0 6px 18px rgba(2,6,23,.08)}

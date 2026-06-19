@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded',function(){
   }
   
   )}});
+window.onload = () =>{GetWeather();}
 function GetWeather(){
   const weatherTableBody = document.getElementById('weatherTableBody');
   const day = new Date().toDateString().substring(0,4);
+weatherTableBody.classList.add('robot');
 
   fetch('https://api.openweathermap.org/data/2.5/weather/?lat=40.8&lon=-74&appid=2563fbd21b629c5edc33e1c5fa83d6ba&units=imperial')
     .then(response => response.json())
@@ -21,6 +23,7 @@ function GetWeather(){
         let weatherHTML = '';
         weatherHTML += '<tr><td>' + day + '</td><td>' + data.main.temp + '</td><td>' + data.weather[0].main + '</td></tr>';
         weatherTableBody.innerHTML = weatherHTML;
+        
     });
     
 }
