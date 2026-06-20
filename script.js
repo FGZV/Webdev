@@ -17,7 +17,7 @@ function GetWeather(){
   const day = new Date().toDateString().substring(0,4);
 weatherTableBody.classList.add('robot');
 
-  fetch('https://api.openweathermap.org/data/2.5/weather/?lat=40.8&lon=-74&appid=2563fbd21b629c5edc33e1c5fa83d6ba&units=imperial')
+  fetch('http://127.0.0.1:8000')
     .then(response => response.json())
     .then(data => {
         let weatherHTML = '';
